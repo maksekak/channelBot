@@ -4,12 +4,12 @@ import (
 	"log"
 
 	"github.com/gin-gonic/gin"
-	"github.com/your-username/channelBot/config"
-	"github.com/your-username/mgok-alert-bot/internal/admin"
-	"github.com/your-username/mgok-alert-bot/internal/auth"
-	"github.com/your-username/mgok-alert-bot/internal/scheduler"
-	"github.com/your-username/mgok-alert-bot/internal/storage"
-	"github.com/your-username/mgok-alert-bot/internal/telegram"
+	"github.com/maksekak/channelBot/cmd/config"
+	"github.com/maksekak/channelBot/cmd/internal/admin"
+	"github.com/maksekak/channelBot/cmd/internal/auth"
+	"github.com/maksekak/channelBot/cmd/internal/scheduler"
+	"github.com/maksekak/channelBot/cmd/internal/storage"
+	"github.com/maksekak/channelBot/cmd/internal/telegram"
 )
 
 func main() {

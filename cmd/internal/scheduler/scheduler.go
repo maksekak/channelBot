@@ -4,9 +4,9 @@ import (
 	"log"
 	"time"
 
-	"github.com/maksekak/channelBot/internal/models"
-	"github.com/maksekak/channelBot/internal/storage"
-	"github.com/maksekak/channelBot/internal/telegram"
+	"github.com/maksekak/channelBot/cmd/internal/models"
+	"github.com/maksekak/channelBot/cmd/internal/storage"
+	"github.com/maksekak/channelBot/cmd/internal/telegram"
 	"github.com/robfig/cron/v3"
 )
 

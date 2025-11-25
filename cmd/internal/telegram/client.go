@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/maksekak/channelBot/internal/models"
+	"github.com/maksekak/channelBot/cmd/internal/models"
 )
 
 type Client struct {

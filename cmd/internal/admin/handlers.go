@@ -10,11 +10,11 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/maksekak/channelBot/config"
-	"github.com/maksekak/channelBot/internal/auth"
-	"github.com/maksekak/channelBot/internal/models"
-	"github.com/maksekak/channelBot/internal/storage"
-	"github.com/maksekak/channelBot/internal/telegram"
+	"github.com/maksekak/channelBot/cmd/config"
+	"github.com/maksekak/channelBot/cmd/internal/auth"
+	"github.com/maksekak/channelBot/cmd/internal/models"
+	"github.com/maksekak/channelBot/cmd/internal/storage"
+	"github.com/maksekak/channelBot/cmd/internal/telegram"
 )
 
 type Handler struct {

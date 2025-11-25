@@ -5,7 +5,7 @@ import (
 	"time"
 
 	_ "github.com/lib/pq"
-	"github.com/maksekak/channelBot/internal/models"
+	"github.com/maksekak/channelBot/cmd/internal/models"
 )
 
 type PostgresStorage struct {
