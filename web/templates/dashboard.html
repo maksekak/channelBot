@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Telegram Manager</title>
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Telegram Channel Manager</div>
+        <div class="nav-links">
+            <a href="/admin/dashboard" class="active">Dashboard</a>
+            <a href="/admin/channels">Channels</a>
+            <a href="/admin/posts/create">Create Post</a>
+            <a href="/admin/statistics">Statistics</a>
+            <form action="/admin/logout" method="POST" style="display: inline;">
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Dashboard</h1>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Posts</h3>
+                <p class="stat-number">{{.Stats.TotalPosts}}</p>
+            </div>
+            <div class="stat-card">
+                <h3>Successful</h3>
+                <p class="stat-number">{{.Stats.Successful}}</p>
+            </div>
+            <div class="stat-card">
+                <h3>Failed</h3>
+                <p class="stat-number">{{.Stats.Failed}}</p>
+            </div>
+            <div class="stat-card">
+                <h3>Scheduled</h3>
+                <p class="stat-number">{{.Stats.Scheduled}}</p>
+            </div>
+            <div class="stat-card">
+                <h3>Channels</h3>
+                <p class="stat-number">{{.Stats.ActiveChannels}}/{{.Stats.TotalChannels}}</p>
+            </div>
+        </div>
+
+        <div class="recent-posts">
+            <h2>Recent Posts</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Content</th>
+                        <th>Status</th>
+                        <th>Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{range .Posts}}
+                    <tr>
+                        <td>{{.ID}}</td>
+                        <td>{{.Content}}</td>
+                        <td><span class="status-{{.Status}}">{{.Status}}</span></td>
+                        <td>{{.CreatedAt.Format "02.01.2006 15:04"}}</td>
+                    </tr>
+                    {{end}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
